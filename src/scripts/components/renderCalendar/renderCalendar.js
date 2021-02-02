@@ -1,6 +1,7 @@
 const renderCalendar = ({
   appElement,
-  currentDate
+  currentMonth,
+  currentYear
 }) => {
   const calendarContainer = document.createElement("table");
   const calendarHead = document.createElement("thead");
@@ -15,13 +16,13 @@ const renderCalendar = ({
   appElement.append(calendarContainer);
 
   const SECONDS_IN_A_DAY = 86400000;
-  let getYear = currentDate.getFullYear(); //2017
-  let getMonth = currentDate.getMonth();
-  const firstDayMonth = Date.parse(new Date(getYear, getMonth, 1));
-  const lastDayMonth = Date.parse(new Date(getYear, getMonth + 1, 0));
+  const firstDayMonth = Date.parse(new Date(currentYear, currentMonth, 1));
+  const lastDayMonth = Date.parse(new Date(currentYear, currentMonth + 1, 0));
+  console.log(currentMonth);
 
   let firstDay = 1;
-  for (let i = firstDayMonth; i <= lastDayMonth; i = i + SECONDS_IN_A_DAY) {
+
+    for (let i = firstDayMonth; i <= lastDayMonth; i = i + SECONDS_IN_A_DAY) {
     let [DayNum, DayName] = new Date(i).toLocaleDateString("en-US", {
       day: 'numeric',
       weekday: 'short'
