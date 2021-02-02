@@ -5,7 +5,70 @@ body {
   line-height: 1.3em;
 }
 
-.calendarBar {
+.calendar-bar {
   display: flex;
   justify-content: center;
+  padding: 25px 50px;
+
+  &__title {
+    font-weight: 600;
+    line-height: 21px;
+    margin: 0 50px;
+  }
+
+  &__btn-prev {
+    border: none;
+    background: #fff;
+    outline: none;
+  }
+
+  &__btn-next {
+    border: none;
+    background: #fff;
+    outline: none;
+  }
+}
+
+.calendar-container {
+  border-collapse: collapse;
+}
+
+.calendar-head {
+  &__element {
+    width: 34px;
+    height: 64px;
+    border: 1px solid rgba(126, 126, 126, 0.3);
+
+    &--day-off {
+      background: #f0f0f0;
+    }
+  }
+
+  &__week-day {
+    line-height: 21px;
+    text-align: center;
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  &__month-day {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+.calendar-body {
+  &__element {
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(126, 126, 126, 0.3);
+
+    &--day-off {
+      background: #f0f0f0;
+    }
+  }
 }
