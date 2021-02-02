@@ -20,17 +20,20 @@ body {
     border: none;
     background: #fff;
     outline: none;
+    cursor: pointer;
   }
 
   &__btn-next {
     border: none;
     background: #fff;
     outline: none;
+    cursor: pointer;
   }
 }
 
 .calendar-container {
   border-collapse: collapse;
+  margin: auto;
 }
 
 .calendar-head {
